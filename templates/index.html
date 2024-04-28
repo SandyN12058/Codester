@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Codester</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/0efa5d3b58.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='logo-transparent-png.png') }}">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#footer">SOCIAL</a></li>
+                <li class="sign-up"><a>SIGN UP</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="home">
+        <div class="container">
+            <div class="content hide">
+                <h2 class="dsa">DSA</h2>
+                <h2 class="bootcamp">Bootcamp</h2>
+                <p>Launch your future career by learning DSA.</p>
+                <p>Brought to you, a beginner friendly Live Workshop where you can enhance your DSA skills.</p>
+
+                <div class="duration first">
+                    <img src="{{ url_for('static', filename='tick.png') }}" width="30px">
+                    <p>Exclusive 4 weeks</p>
+                </div>
+
+                <div class="date">
+                    <img src="{{ url_for('static', filename='calendar.png') }}" width="30px">
+                    <p>&nbsp;&nbsp;8:00 PM &nbsp;|&nbsp; 5<sup>th</sup> Sep, 2023</p>
+                </div>
+                <div class="buttons">
+                    <a href="#about"><button class="read-btn" type="button">Read more</button></a>
+                    <a><button class="register-btn" type="button">Register for Free</button></a>
+                </div>
+            </div>
+            <div class="pic hide">
+                <img src="{{ url_for('static', filename='home_pic.png') }}">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="heading">
+                <h2>About us</h2>
+            </div>
+            
+            <div class="line">
+                <hr>
+            </div>
+
+            <div class="desc">
+                <p>Our journey depicted in numbers</p>
+            </div>
+
+            <div class="box-wrapper">
+                <div class="box hide">
+                    <h2>15k+</h2>
+                    <p>Happy Learners</p>
+                </div>
+                <div class="box hide">
+                    <h2>100+</h2>
+                    <p>Bootcamps Completed</p>
+                </div>
+                <div class="box hide">
+                    <h2>50+</h2>
+                    <p>Industry Experts</p>
+                </div>
+                <div class="box hide">
+                    <h2>150+</h2>
+                    <p>Students Placed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="about-container">
+            <div class="heading">
+                <h2>Our Team</h2>
+            </div>
+
+            <div class="line">
+                <hr>
+            </div>
+
+            <div class="pic-container">
+                <div class="pic-box hide">
+                    <img src="{{ url_for('static', filename='mentor_2.png') }}">
+                    <h3>Mr. Nelson P</h3>
+                </div>
+                <div class="pic-box hide">
+                    <img src="{{ url_for('static', filename='mentor_5.png') }}">
+                    <h3>Mr. Ritz G</h3>
+                </div>
+                <div class="pic-box hide">
+                    <img src="{{ url_for('static', filename='mentor_3.png') }}">
+                    <h3>Mr. Sandy N</h3>
+                </div>
+                <div class="pic-box hide">
+                    <img src="{{ url_for('static', filename='mentor_4.png') }}">
+                    <h3>Mr. Pratham B</h3>
+                </div>
+                <div class="pic-box hide">
+                    <img src="{{ url_for('static', filename='mentor_1.png') }}">
+                    <h3>Mr. Sam N</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-container-wrapper">
+            <div class="footer-container">
+                <p>Copyright &copy; CodSoft Pvt Ltd. All Rights Reserved</p>
+                <ul class="social">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="yt fa-brands fa-youtube"></i></li>
+                    <li><i class="li fa-brands fa-linkedin-in"></i></li>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+                    <li><i class="insta fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else{
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hidden = document.querySelectorAll('.hide');
+    hidden.forEach((el) => observer.observe(el));
+
+</script>
+</html>
