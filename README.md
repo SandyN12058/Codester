@@ -26,13 +26,7 @@
     <p> 3. Run the Docker container:</p>
     <code>docker run -p 5000:5000 sandeep12058/cc_assign_7:latest</code><br><br><br>
 
-<h2>Our Team</h2>
-Sanwara Chandak<br>
-Prasad Chate<br>
-Om Deore<br>
-Sandeep Naduvinmani 
-
-<h2>Connect with us</h2>
+<h2>Connect with me</h2>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sandeep-naduvinmani)
 <br><br>
